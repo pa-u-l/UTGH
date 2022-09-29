@@ -1,11 +1,1 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
-
-
-
-
-
-
-
+depth = OBJECT_DEPTH.BATTLE_GUI;
