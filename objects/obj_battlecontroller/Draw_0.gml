@@ -1,8 +1,8 @@
-#region Draw player info
+///@desc Draw player info
 // Draw name and lv
 scribble(main.name + "   LV " + string(main.battle.player.love))
 .starting_format("mnc", c_white)
-.draw(32, 400);
+.draw(30, 400);
 
 // Draw health header
 scribble("HP").starting_format("8bit", c_white).draw(240, 401);
@@ -27,5 +27,3 @@ if (main.battle.vars.karma_enabled == false) {
 	.starting_format("mnc", c_white)
 	.draw(__width + 20, 400);
 }
-
-#endregion

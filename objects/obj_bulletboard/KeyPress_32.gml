@@ -1,11 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
-
-
-
-
-
-
-
+border.x1 = 300;
+border.y1 = 200;

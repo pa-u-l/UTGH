@@ -14,5 +14,8 @@ if (keyboard_check(ord("R")) && quit_timer == 0) {
 	}
 }
 
+if (quit_timer < 0) { quit_timer = 0; }
+if (reset_timer < 0) { reset_timer  = 0; }
+
 if (quit_timer == 120) { game_end(); }
 if (reset_timer == 120) { game_restart(); }

@@ -21,9 +21,6 @@ if (window_get_fullscreen() && main.visual.border_enabled) {
 var qt_alpha = quit_timer / 120;
 var rt_alpha = reset_timer / 120;
 
-show_debug_message(qt_alpha);
-show_debug_message(rt_alpha);
-
 scribble("Quitting...")
 .starting_format("mnc", c_white)
 .blend(c_white, qt_alpha)
@@ -36,7 +33,7 @@ scribble("Restarting...")
 #endregion
 #region Debug - draw fps
 if (main.debug.enabled && main.debug.show_fps) {
-	var xx = window_get_width() - 2;
+	var xx = window_get_width();
 	var fps_t = scribble("[scale,0.5]FPS: " + string(game_get_speed(gamespeed_fps)))
 	.starting_format("dtmono", c_white)
 	.align(fa_right, fa_top);
@@ -48,7 +45,7 @@ if (main.debug.enabled && main.debug.show_fps) {
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	fps_t.draw(xx - 3, 0);
+	fps_t.draw(xx, 0);
 }
 #endregion
 #region Debug - draw tracked variables
@@ -78,6 +75,6 @@ if (main.debug.show_tvars) {
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 
-	__tvar_sc.draw(window_get_width() - 3, window_get_height());	
+	__tvar_sc.draw(window_get_width(), window_get_height());	
 }
 #endregion
